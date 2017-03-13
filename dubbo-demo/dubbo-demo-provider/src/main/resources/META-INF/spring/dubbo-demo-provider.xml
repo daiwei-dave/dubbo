@@ -19,9 +19,11 @@
 	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
 	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
-	
+
+	<!-- 和本地服务一样实现远程服务 -->
 	<bean id="demoService" class="com.alibaba.dubbo.demo.provider.DemoServiceImpl" />
-	
+
+	<!-- 增加暴露远程服务配置 -->
 	<dubbo:service interface="com.alibaba.dubbo.demo.DemoService" ref="demoService" />
 	
 </beans>
